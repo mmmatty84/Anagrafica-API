@@ -25,6 +25,8 @@ services:
       dockerfile: .docker/php/Dockerfile
     ports:
       - '9000:9000'
+    volumes:
+      - ./:/var/www/html
     depends_on:
       - database
     networks:

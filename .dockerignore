@@ -16,8 +16,6 @@ docker-compose.yml
 /.env.local.php
 /public/bundles/
 /vendor/
-/var/cache/
-/val/log/
 ###< Symfony ###
 
 ### README.md

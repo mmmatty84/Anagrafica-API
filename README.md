@@ -6,7 +6,7 @@
 - MySql 8
 
 Il container che viene generato ha già un database popolato con dei dati di esempio,
-viene caricato all'avvio del container utilizzando il file anagrafica.sql consultabile
+viene caricato all'avvio del container utilizzando il file **anagrafica.sql** consultabile
 nella cartella .docker
 
 La struttura del db Anagrafica prevede 4 tabelle
@@ -38,4 +38,4 @@ I quattro endpoint sono stati definiti con le seguenti annotations:
 
 - #[Route('/famiglia/aggiungi/{cittadino}', name: 'aggiungi', methods:['PATCH'])]
 
-Viene allegato il file Anagrafica API.postman_collection.json all'interno della cartella utils con gli schemi e dati di esempio delle 4 richieste alle API
+Viene allegato il file **Anagrafica API.postman_collection.json** all'interno della cartella utils con gli schemi e dati di esempio delle 4 richieste alle API

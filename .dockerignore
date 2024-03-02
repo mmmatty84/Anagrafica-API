@@ -8,9 +8,7 @@
 ### Docker
 .docker
 .dockerignore
-Dockerfile
-docker-compose-dev.yml
-docker-compose-prod.yml
+docker-compose.yml
 
 ###> Symfony ###
 /.env.local

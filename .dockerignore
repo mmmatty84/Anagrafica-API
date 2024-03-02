@@ -1,0 +1,26 @@
+### Ide
+.idea
+
+### Git
+.git
+.gitignore
+
+### Docker
+.docker
+.dockerignore
+Dockerfile
+docker-compose-dev.yml
+docker-compose-prod.yml
+
+###> Symfony ###
+/.env.local
+/.env.*.local
+/.env.local.php
+/public/bundles/
+/vendor/
+/var/cache/
+/val/log/
+###< Symfony ###
+
+### README.md
+README.md

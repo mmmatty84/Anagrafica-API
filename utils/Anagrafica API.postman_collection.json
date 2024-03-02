@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "31836399-f54d-444e-a7fa-45224de1308b",
+		"name": "Anagrafica API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33324988"
+	},
+	"item": [
+		{
+			"name": "Promuovi a responsabile",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cittadino\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/famiglia/:famiglia/promuovi",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"famiglia",
+						":famiglia",
+						"promuovi"
+					],
+					"variable": [
+						{
+							"key": "famiglia",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sposta in altra famiglia",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"famiglia\": \"31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/famiglia/:famiglia_origine/sposta/:cittadino",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"famiglia",
+						":famiglia_origine",
+						"sposta",
+						":cittadino"
+					],
+					"variable": [
+						{
+							"key": "famiglia_origine",
+							"value": "30"
+						},
+						{
+							"key": "cittadino",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggiungi in altra famiglia",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"famiglia\": \"22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/famiglia/aggiungi/:cittadino",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"famiglia",
+						"aggiungi",
+						":cittadino"
+					],
+					"variable": [
+						{
+							"key": "cittadino",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rimuovi da famiglia",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/famiglia/:famiglia/rimuovi/:cittadino",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"famiglia",
+						":famiglia",
+						"rimuovi",
+						":cittadino"
+					],
+					"variable": [
+						{
+							"key": "famiglia",
+							"value": "11"
+						},
+						{
+							"key": "cittadino",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost"
+		}
+	]
+}

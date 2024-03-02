@@ -25,16 +25,11 @@ COPY . /var/www/html
 USER root
 RUN chown -R www-data:www-data /var/www/html/var  \
     && chmod -R 775 /var/www/html/var
-
-COPY migrations.sh /usr/local/bin/migrations.sh
-RUN chmod +x /usr/local/bin/start.sh
-
 USER symfony_user
 
 # Installa le dipendenze di Composer
-#RUN composer install --no-dev --optimize-autoloader
-RUN composer install
+RUN composer install --no-dev --optimize-autoloader
 
-# Script per lanciare le migrations all'avvio del container
-CMD ["/usr/local/bin/migrations.sh"]
+ENV APP_ENV=prod \
+    APP_DEBUG=0
 

@@ -34,10 +34,10 @@ class FamigliaController extends AbstractController
         $requestBody = json_decode($request->getContent(), true);
         $cittadinoId = $requestBody['cittadino'] ?? null;
 
+        // Validazione campo cittadino
         $violations = $this->validator->validate($cittadinoId);
 
         if (count($violations) > 0) {
-            // Gestisci validazione campo cittadino
             return $this->json([
                 'success' => false,
                 'message' => 'ID del cittadino mancante o non valido.'
@@ -99,10 +99,10 @@ class FamigliaController extends AbstractController
         $requestBody = json_decode($request->getContent(), true);
         $famigliaId = $requestBody['famiglia'] ?? null;
 
+        // Validazione campo famiglia
         $violations = $this->validator->validate($famigliaId);
 
         if (count($violations) > 0) {
-            // Gestisci validazione campo cittadino
             return $this->json([
                 'success' => false,
                 'message' => 'ID della famiglia di destinazione mancante o non valido.'
@@ -147,10 +147,10 @@ class FamigliaController extends AbstractController
         $requestBody = json_decode($request->getContent(), true);
         $famigliaId = $requestBody['famiglia'] ?? null;
 
+        // Validazione campo famiglia
         $violations = $this->validator->validate($famigliaId);
 
         if (count($violations) > 0) {
-            // Gestisci validazione campo cittadino
             return $this->json([
                 'success' => false,
                 'message' => 'ID della famiglia di destinazione mancante o non valido.'

@@ -7,7 +7,7 @@
 
 Il container che viene generato ha già un database popolato con dei dati di esempio,
 viene caricato all'avvio del container utilizzando il file **anagrafica.sql** consultabile
-nella cartella .docker
+nella cartella .docker e nella cartella utils
 
 La struttura del db Anagrafica prevede 4 tabelle
 - cittadino (descrive nome, cognome e codice fiscale del cittadino)
